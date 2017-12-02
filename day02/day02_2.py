@@ -11,12 +11,10 @@ for line in sys.stdin:
         i = num[x]
         for y in range(x+1, len(num)):
             j = num[y]
-            if i % j == 0:
-                answer += i // j
-                flag = True
-                break
-            if j % i == 0:
-                answer += j // i
+            b = max([i, j])
+            s = min([i, j])
+            if b % s == 0:
+                answer += b // s
                 flag = True
                 break
         if flag: break
