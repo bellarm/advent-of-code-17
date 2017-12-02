@@ -1,5 +1,1 @@
-# ignore all
-*
 
-# unignore cpp files
-!*.cpp
