@@ -14,13 +14,10 @@ int main(void) {
     while (iss >> n) {
       if (flag) break;
       for (auto i: nums) {
-        if (n % i == 0) {
-          answer += n / i;
-          flag = true;
-          break;
-        }
-        if (i % n == 0) {
-          answer += i / n;
+        int b = (n > i) ? n : i;
+        int s = (n < i) ? n : i;
+        if (b % s == 0) {
+          answer += b / s;
           flag = true;
           break;
         }
