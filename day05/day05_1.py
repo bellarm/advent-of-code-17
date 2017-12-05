@@ -8,11 +8,8 @@ size = len(instr)
 while True:
     if i >= size:
         break
-    elif i >= 0:
-        instr[i] += 1
-        i += instr[i] - 1
-    else:
-        i += instr[i]
+    instr[i] += 1
+    i += instr[i] - 1
     step += 1
 
 print(step)
